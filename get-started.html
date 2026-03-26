@@ -81,6 +81,14 @@
       font-size: 18px;
     }
 
+    /* Confirmation Message */
+    .thank-you {
+      display: none;
+      color: #00ff99;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
     /* Responsive */
     @media (max-width: 400px) {
       form {
@@ -102,12 +110,14 @@
   <p>Fill your details below and we’ll contact you fast.</p>
 
   <!-- Form -->
-  <form action="#" method="post">
+  <form id="contact-form" action="https://formspree.io/f/xdapojkz" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" rows="4" placeholder="Your Message"></textarea>
     <button type="submit">Submit</button>
   </form>
+
+  <p class="thank-you" id="thank-you-msg">Thank you! We’ll contact you soon. ✅</p>
 
   <!-- Services -->
   <div class="services">
@@ -119,6 +129,32 @@
       <li>Automation Bots</li>
     </ul>
   </div>
+
+  <!-- JS for Form Submission -->
+  <script>
+    const form = document.getElementById('contact-form');
+    const thankYou = document.getElementById('thank-you-msg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          thankYou.style.display = 'block';
+        } else {
+          alert('Oops! There was a problem. Please try again.');
+        }
+      }).catch(error => {
+        alert('Oops! There was a problem. Please try again.');
+      });
+    });
+  </script>
 
 </body>
 </html>
