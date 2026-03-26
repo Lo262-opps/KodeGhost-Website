@@ -67,10 +67,21 @@
       transform: scale(1.05);
     }
 
+    /* Thank You Message */
+    .thank-you {
+      display: none;
+      color: #00ff99;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
     /* Services Section */
     .services {
       margin-top: 40px;
       text-align: center;
+    }
+    .services h2 {
+      margin-bottom: 20px;
     }
     .services ul {
       list-style: none;
@@ -79,14 +90,7 @@
     .services li {
       margin: 10px 0;
       font-size: 18px;
-    }
-
-    /* Confirmation Message */
-    .thank-you {
-      display: none;
-      color: #00ff99;
-      font-weight: bold;
-      margin-top: 20px;
+      color: #00c3ff;
     }
 
     /* Responsive */
@@ -109,7 +113,7 @@
   <h1>Get Started with KodeGhost Technology</h1>
   <p>Fill your details below and we’ll contact you fast.</p>
 
-  <!-- Form -->
+  <!-- Contact Form -->
   <form id="contact-form" action="https://formspree.io/f/xdapojkz" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
@@ -117,20 +121,21 @@
     <button type="submit">Submit</button>
   </form>
 
+  <!-- Thank You Message -->
   <p class="thank-you" id="thank-you-msg">Thank you! We’ll contact you soon. ✅</p>
 
-  <!-- Services -->
+  <!-- Services Section -->
   <div class="services">
     <h2>Our Services</h2>
     <ul>
-      <li>Web Design</li>
-      <li>Logo Design</li>
-      <li>Tech Solutions</li>
-      <li>Automation Bots</li>
+      <li>🌐 Website Design</li>
+      <li>🎨 Logo Design</li>
+      <li>💻 Tech Solutions</li>
+      <li>🤖 Automation Bots</li>
     </ul>
   </div>
 
-  <!-- JS for Form Submission -->
+  <!-- Form Submission Script -->
   <script>
     const form = document.getElementById('contact-form');
     const thankYou = document.getElementById('thank-you-msg');
