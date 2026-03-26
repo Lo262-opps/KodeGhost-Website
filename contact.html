@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KodeGhost - Contact</title>
+<style>
+  body{background:#0a0f1c;color:white;font-family:Arial,sans-serif;padding:20px;text-align:center;}
+  nav a{color:#00c3ff;margin:0 10px;text-decoration:none;font-weight:bold;}
+  nav a:hover{color:#00f0ff;}
+  h1,h2{color:#00c3ff;}
+  form{display:inline-block;text-align:left; max-width:350px; width:100%; margin:20px auto;}
+  input,textarea,button{width:100%; padding:12px;margin-bottom:15px; border-radius:8px; border:none; font-size:16px;}
+  input,textarea{background:#1a2236;color:white;}
+  input::placeholder,textarea::placeholder{color:#aaa;}
+  button{background:#00c3ff;color:black;font-weight:bold; cursor:pointer; transition:0.3s;}
+  button:hover{background:#00f0ff; transform:scale(1.05);}
+</style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a> | 
+    <a href="get-started.html">Get Started</a> | 
+    <a href="services.html">Services</a> | 
+    <a href="about.html">About</a> | 
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>Contact Us</h1>
+  <p>Send us a message and we will respond quickly!</p>
+
+  <form action="https://formspree.io/f/xdapojkz" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+</body>
+</html>
